@@ -3,6 +3,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from services.vector_store import add_text
+
 add_text("""
 Naeem Sajjad is a 24-year-old software developer from Hasilpur, Pakistan.
 He is a MERN stack and full stack developer who works on modern web applications,
@@ -26,8 +27,9 @@ production-level AI systems, chatbots, semantic search engines, and RAG applicat
 """)
 
 add_text("""
-Naeem Sajjad lives in Hasilpur with his family. His father’s name is Sajjad Hussain.
+Naeem Sajjad lives in Hasilpur with his family. His father's name is Sajjad Hussain.
 Naeem also has a brother named Waseem Sajjad, who owns a perfume business.
 Naeem enjoys technology, software development, AI learning, and building innovative products.
 """)
+
 print("Data added successfully")
