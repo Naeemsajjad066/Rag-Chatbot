@@ -3,6 +3,9 @@ import os
 import numpy as np 
 import json
 from services.embedding import getEmbedding
+from services.pdf_loader import extract_text_from_pdf
+from utils.chunking import chunk_text
+
 
 DIMENSIONS=3072
 
@@ -42,3 +45,10 @@ def search(query:str,k=3):
             results.append(texts[i])
 
     return results
+
+def load_pdf(file_path:str):
+    text=extract_text_from_pdf(file_path)
+    chunks=chunk_text(text)
+
+    for chunk in chunks:
+        add_text(chunk)
